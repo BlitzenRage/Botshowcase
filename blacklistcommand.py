@@ -57,7 +57,6 @@ async def blacklist(interaction: discord.Interaction, user: str, discord_user: d
     except Exception as e:
         await interaction.followup.send(f"Error sending blacklist: {e}", ephemeral=True)
 
-    # Try to fetch the user from the guild by name
     member = discord.utils.find(member = discord_user)
     
     if member:
